@@ -1,0 +1,20 @@
+{
+  "name": "vue-echarts-test",
+  "description": "Vue echarts test project",
+  "main": "",
+  "authors": [
+    "AlekseyBilan <bilan.aleksey.sergeevich@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vue-echarts": "*"
+  }
+}
