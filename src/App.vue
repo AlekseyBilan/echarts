@@ -30,11 +30,15 @@
                 title: {
                     text: 'OPEN'
                 },
+                legend: {
+                    data:['Average open torque','Last open torque','Forecast open torque']
+                },
                 tooltip: {},
                 xAxis: {
                     data: []
                 },
                 yAxis: {
+                    type : 'value'
                 },
                 color: ['#1175B6', '#ADC6E9', '#FFA94A'],
                 series: [{
@@ -57,11 +61,16 @@
                 title: {
                     text: 'Close'
                 },
+                legend: {
+                    data:['Average close torque','Last close torque','Forecast close torque']
+                },
+
                 tooltip: {},
                 xAxis: {
                     data: []
                 },
                 yAxis: {
+                    type : 'value'
                 },
                 color: ['#1175B6', '#ADC6E9', '#FFA94A'],
                 series: [{
@@ -90,15 +99,15 @@
                         current = obj[key];
                         if(current.Profile == this.profile){
                             if(current.Direction === 'Close'){
-                            this.graphCloseLastTorque.push(current.LastTorque);
-                            this.graphCloseAverageTorque.push(current.AverageTorque);
-                            this.graphCloseLabels.push(current.Position);
-                        }else{
-                            this.graphOpenLastTorque.push(current.LastTorque);
-                            this.graphOpenAverageTorque.push(current.AverageTorque);
-                            this.graphOpenLabels.push(current.Position);
+                                this.graphCloseLastTorque.push(current.LastTorque);
+                                this.graphCloseAverageTorque.push(current.AverageTorque);
+                                this.graphCloseLabels.push(current.Position);
+                            }else{
+                                this.graphOpenLastTorque.push(current.LastTorque);
+                                this.graphOpenAverageTorque.push(current.AverageTorque);
+                                this.graphOpenLabels.push(current.Position);
                             }
-                        }
+                       }
                     }
                     //OPEN
                     this.bar.xAxis.data =this.graphOpenLabels;
@@ -122,6 +131,6 @@
     .echarts {
         width: 80vw;
         height: 500px;
-        float: right;
+        margin: 0 auto;
     }
 </style>
