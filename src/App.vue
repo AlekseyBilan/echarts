@@ -35,31 +35,41 @@
                 },
                 tooltip: {},
                 xAxis: {
-                    data: []
+                    data: [],
+                    splitLine: {
+                        "show": true
+                    }
                 },
                 yAxis: {
-                    type : 'value'
+                    type : 'value',
+                    splitLine: {
+                        "show": true
+                    }
                 },
                 color: ['#1175B6', '#ADC6E9', '#FFA94A'],
                 series: [{
                     name: 'Average open torque',
                     type: 'bar',
+                    stack: "stack",
                     data: []
                 },{
                     name: 'Last open torque',
                     type: 'bar',
+                    stack: "stack",
                     data: []
                 },{
                     name: 'Forecast open torque',
                     type: 'bar',
+                    stack: "stack",
                     data: []
                 }
                 ]
             },
+            /*Settings close chart*/
             loadingClose: true,
             barClose: {
                 title: {
-                    text: 'Close'
+                    text: 'CLOSE'
                 },
                 legend: {
                     data:['Average close torque','Last close torque','Forecast close torque']
@@ -67,23 +77,32 @@
 
                 tooltip: {},
                 xAxis: {
-                    data: []
+                    data:[],
+                    splitLine: {
+                    "show": true
+                    }
                 },
                 yAxis: {
-                    type : 'value'
+                    type : 'value',
+                    splitLine: {
+                        "show": true
+                    }
                 },
                 color: ['#1175B6', '#ADC6E9', '#FFA94A'],
                 series: [{
                     name: 'Average close torque',
                     type: 'bar',
+                    stack: "stack",
                     data: []
                 },{
                     name: 'Last close torque',
                     type: 'bar',
+                    stack: "stack",
                     data: []
                 },{
                     name: 'Forecast close torque',
                     type: 'bar',
+                    stack: "stack",
                     data: []
                 }
                 ]
